@@ -166,7 +166,7 @@ contract PubMainToken is ERC20, ERC20Burnable, ERC20Pausable, Ownable {
     address _taxAddress,
     uint256 _taxBPS,
     uint256 _deflationBPS
-  ) payable ERC20(name_, symbol_) {
+  ) ERC20(name_, symbol_) {
     if (customConfigProps._isMaxAmountOfTokensSet) {
       if (maxTokenAmount == 0) {
         revert InvalidMaxTokenAmount(maxTokenAmount);
